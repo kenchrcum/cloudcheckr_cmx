@@ -73,7 +73,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api-us.cloudcheckr.com*
+All URIs are relative to *https://api-eu.cloudcheckr.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -274,7 +274,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: application
-- **Authorization URL**: https://auth-us.cloudcheckr.com/auth/connect/authorize
+- **Authorization URL**: https://auth-eu.cloudcheckr.com/auth/connect/authorize
 - **Scopes**: 
  - **api**: CloudCheckr API
 

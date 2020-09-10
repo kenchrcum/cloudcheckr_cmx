@@ -1,6 +1,6 @@
 # cloudcheckr_cmx.ClientsApi
 
-All URIs are relative to *https://api-us.cloudcheckr.com*
+All URIs are relative to *https://api-eu.cloudcheckr.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
