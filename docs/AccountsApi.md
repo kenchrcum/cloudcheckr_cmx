@@ -1,13 +1,12 @@
 # cloudcheckr_cmx.AccountsApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_account**](AccountsApi.md#get_account) | **GET** /customer/v1/customers/{customerId}/accounts/{accountId} | Get an individual account, account group, or MAV.
 [**get_accounts**](AccountsApi.md#get_accounts) | **GET** /customer/v1/customers/{customerId}/accounts | Get all accounts, account groups, and MAVs.
 [**get_ancestors**](AccountsApi.md#get_ancestors) | **GET** /customer/v1/customers/{customerId}/accounts/{accountId}/ancestors | Get all ancestors of an account.
-
 
 # **get_account**
 > AccountGroupResponseModel get_account(customer_id, account_id)

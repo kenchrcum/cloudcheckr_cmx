@@ -1,12 +1,11 @@
 # cloudcheckr_cmx.TokenManagementApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**exchange_token_for_delegate_access_token**](TokenManagementApi.md#exchange_token_for_delegate_access_token) | **PUT** /auth/v1/token/exchange/{customerId} | Exchange a token for a different customer.
 [**get_token_info**](TokenManagementApi.md#get_token_info) | **GET** /auth/v1/token/info | Get information about the current bearer token.
-
 
 # **exchange_token_for_delegate_access_token**
 > TokenResponse exchange_token_for_delegate_access_token(customer_id)

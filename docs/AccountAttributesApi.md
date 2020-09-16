@@ -1,6 +1,6 @@
 # cloudcheckr_cmx.AccountAttributesApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,9 +10,8 @@ Method | HTTP request | Description
 [**list_account_attributes**](AccountAttributesApi.md#list_account_attributes) | **GET** /customer/v1/customers/{customerId}/account-attributes | Get all account attributes.
 [**update_account_attribute**](AccountAttributesApi.md#update_account_attribute) | **PUT** /customer/v1/customers/{customerId}/account-attributes | Create/Update an account attribute.
 
-
 # **attach_account_attribute**
-> BulkAccountAssignmentResponseModelAccountAttributeAssignmentResponseModel attach_account_attribute(customer_id, attribute_name, value, request=request)
+> BulkAccountAssignmentResponseModelAccountAttributeAssignmentResponseModel attach_account_attribute(customer_id, attribute_name, value, body=body)
 
 Bulk associate account attribute name-value to list of general accounts.
 
@@ -33,11 +32,11 @@ api_instance = cloudcheckr_cmx.AccountAttributesApi(cloudcheckr_cmx.ApiClient(co
 customer_id = 'customer_id_example' # str | 
 attribute_name = 'attribute_name_example' # str | 
 value = 'value_example' # str | 
-request = cloudcheckr_cmx.BulkAccountAttributeAssignmentRequestModel() # BulkAccountAttributeAssignmentRequestModel |  (optional)
+body = cloudcheckr_cmx.BulkAccountAttributeAssignmentRequestModel() # BulkAccountAttributeAssignmentRequestModel |  (optional)
 
 try:
     # Bulk associate account attribute name-value to list of general accounts.
-    api_response = api_instance.attach_account_attribute(customer_id, attribute_name, value, request=request)
+    api_response = api_instance.attach_account_attribute(customer_id, attribute_name, value, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AccountAttributesApi->attach_account_attribute: %s\n" % e)
@@ -50,7 +49,7 @@ Name | Type | Description  | Notes
  **customer_id** | **str**|  | 
  **attribute_name** | **str**|  | 
  **value** | **str**|  | 
- **request** | [**BulkAccountAttributeAssignmentRequestModel**](BulkAccountAttributeAssignmentRequestModel.md)|  | [optional] 
+ **body** | [**BulkAccountAttributeAssignmentRequestModel**](BulkAccountAttributeAssignmentRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -114,7 +113,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -231,7 +230,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_account_attribute**
-> AccountAttributeResponseModel update_account_attribute(customer_id, request=request)
+> AccountAttributeResponseModel update_account_attribute(customer_id, body=body)
 
 Create/Update an account attribute.
 
@@ -250,11 +249,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = cloudcheckr_cmx.AccountAttributesApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
-request = cloudcheckr_cmx.UpdateRequestAccountAttributeRequestModel() # UpdateRequestAccountAttributeRequestModel |  (optional)
+body = cloudcheckr_cmx.UpdateRequestAccountAttributeRequestModel() # UpdateRequestAccountAttributeRequestModel |  (optional)
 
 try:
     # Create/Update an account attribute.
-    api_response = api_instance.update_account_attribute(customer_id, request=request)
+    api_response = api_instance.update_account_attribute(customer_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AccountAttributesApi->update_account_attribute: %s\n" % e)
@@ -265,7 +264,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
- **request** | [**UpdateRequestAccountAttributeRequestModel**](UpdateRequestAccountAttributeRequestModel.md)|  | [optional] 
+ **body** | [**UpdateRequestAccountAttributeRequestModel**](UpdateRequestAccountAttributeRequestModel.md)|  | [optional] 
 
 ### Return type
 

@@ -1,6 +1,6 @@
 # cloudcheckr_cmx.RolesApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -14,9 +14,8 @@ Method | HTTP request | Description
 [**modify_user_roles**](RolesApi.md#modify_user_roles) | **PUT** /auth/v1/customers/{customerId}/roles/{roleId}/users | Add or remove a role from multiple users.
 [**update_role**](RolesApi.md#update_role) | **PUT** /policy/v1/customers/{customerId}/roles/{roleId} | Update a role.
 
-
 # **create_role**
-> RoleResponseModel create_role(customer_id, request=request)
+> RoleResponseModel create_role(customer_id, body=body)
 
 Create a new role.
 
@@ -35,11 +34,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = cloudcheckr_cmx.RolesApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
-request = cloudcheckr_cmx.CreateRequestRoleRequestModel() # CreateRequestRoleRequestModel |  (optional)
+body = cloudcheckr_cmx.CreateRequestRoleRequestModel() # CreateRequestRoleRequestModel |  (optional)
 
 try:
     # Create a new role.
-    api_response = api_instance.create_role(customer_id, request=request)
+    api_response = api_instance.create_role(customer_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RolesApi->create_role: %s\n" % e)
@@ -50,7 +49,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
- **request** | [**CreateRequestRoleRequestModel**](CreateRequestRoleRequestModel.md)|  | [optional] 
+ **body** | [**CreateRequestRoleRequestModel**](CreateRequestRoleRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -351,7 +350,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **modify_client_roles**
-> ListModificationResponseModel modify_client_roles(customer_id, role_id, request=request)
+> ListModificationResponseModel modify_client_roles(customer_id, role_id, body=body)
 
 Add or remove a role from multiple clients.
 
@@ -371,11 +370,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = cloudcheckr_cmx.RolesApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
 role_id = 'role_id_example' # str | 
-request = cloudcheckr_cmx.ListModificationRequestModel() # ListModificationRequestModel |  (optional)
+body = cloudcheckr_cmx.ListModificationRequestModel() # ListModificationRequestModel |  (optional)
 
 try:
     # Add or remove a role from multiple clients.
-    api_response = api_instance.modify_client_roles(customer_id, role_id, request=request)
+    api_response = api_instance.modify_client_roles(customer_id, role_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RolesApi->modify_client_roles: %s\n" % e)
@@ -387,7 +386,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
  **role_id** | **str**|  | 
- **request** | [**ListModificationRequestModel**](ListModificationRequestModel.md)|  | [optional] 
+ **body** | [**ListModificationRequestModel**](ListModificationRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -405,7 +404,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **modify_user_roles**
-> ListModificationResponseModel modify_user_roles(customer_id, role_id, request=request)
+> ListModificationResponseModel modify_user_roles(customer_id, role_id, body=body)
 
 Add or remove a role from multiple users.
 
@@ -425,11 +424,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = cloudcheckr_cmx.RolesApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
 role_id = 'role_id_example' # str | 
-request = cloudcheckr_cmx.ListModificationRequestModel() # ListModificationRequestModel |  (optional)
+body = cloudcheckr_cmx.ListModificationRequestModel() # ListModificationRequestModel |  (optional)
 
 try:
     # Add or remove a role from multiple users.
-    api_response = api_instance.modify_user_roles(customer_id, role_id, request=request)
+    api_response = api_instance.modify_user_roles(customer_id, role_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RolesApi->modify_user_roles: %s\n" % e)
@@ -441,7 +440,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
  **role_id** | **str**|  | 
- **request** | [**ListModificationRequestModel**](ListModificationRequestModel.md)|  | [optional] 
+ **body** | [**ListModificationRequestModel**](ListModificationRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -459,7 +458,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_role**
-> RoleResponseModel update_role(customer_id, role_id, request=request)
+> RoleResponseModel update_role(customer_id, role_id, body=body)
 
 Update a role.
 
@@ -479,11 +478,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = cloudcheckr_cmx.RolesApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
 role_id = 'role_id_example' # str | 
-request = cloudcheckr_cmx.UpdateRequestRoleRequestModel() # UpdateRequestRoleRequestModel |  (optional)
+body = cloudcheckr_cmx.UpdateRequestRoleRequestModel() # UpdateRequestRoleRequestModel |  (optional)
 
 try:
     # Update a role.
-    api_response = api_instance.update_role(customer_id, role_id, request=request)
+    api_response = api_instance.update_role(customer_id, role_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RolesApi->update_role: %s\n" % e)
@@ -495,7 +494,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
  **role_id** | **str**|  | 
- **request** | [**UpdateRequestRoleRequestModel**](UpdateRequestRoleRequestModel.md)|  | [optional] 
+ **body** | [**UpdateRequestRoleRequestModel**](UpdateRequestRoleRequestModel.md)|  | [optional] 
 
 ### Return type
 

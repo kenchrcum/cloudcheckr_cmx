@@ -1,6 +1,6 @@
 # cloudcheckr_cmx.SAMLProvidersApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,9 +10,8 @@ Method | HTTP request | Description
 [**list_saml_providers**](SAMLProvidersApi.md#list_saml_providers) | **GET** /auth/v1/customers/{customerId}/saml-providers | Get all SAML providers.
 [**update_saml_provider**](SAMLProvidersApi.md#update_saml_provider) | **PUT** /auth/v1/customers/{customerId}/saml-providers/{samlProviderId} | Updates an existing SAML provider entry for this customer.
 
-
 # **create_saml_provider**
-> SamlProviderResponseDetailModel create_saml_provider(customer_id, request=request)
+> SamlProviderResponseDetailModel create_saml_provider(customer_id, body=body)
 
 Creates a new SAML provider entry for this customer.
 
@@ -31,11 +30,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = cloudcheckr_cmx.SAMLProvidersApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
-request = cloudcheckr_cmx.CreateRequestSamlProviderRequestModel() # CreateRequestSamlProviderRequestModel |  (optional)
+body = cloudcheckr_cmx.CreateRequestSamlProviderRequestModel() # CreateRequestSamlProviderRequestModel |  (optional)
 
 try:
     # Creates a new SAML provider entry for this customer.
-    api_response = api_instance.create_saml_provider(customer_id, request=request)
+    api_response = api_instance.create_saml_provider(customer_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SAMLProvidersApi->create_saml_provider: %s\n" % e)
@@ -46,7 +45,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
- **request** | [**CreateRequestSamlProviderRequestModel**](CreateRequestSamlProviderRequestModel.md)|  | [optional] 
+ **body** | [**CreateRequestSamlProviderRequestModel**](CreateRequestSamlProviderRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -110,7 +109,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -225,7 +224,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_saml_provider**
-> SamlProviderResponseDetailModel update_saml_provider(customer_id, saml_provider_id, request=request)
+> SamlProviderResponseDetailModel update_saml_provider(customer_id, saml_provider_id, body=body)
 
 Updates an existing SAML provider entry for this customer.
 
@@ -245,11 +244,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = cloudcheckr_cmx.SAMLProvidersApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
 saml_provider_id = 'saml_provider_id_example' # str | 
-request = cloudcheckr_cmx.UpdateRequestSamlProviderRequestModel() # UpdateRequestSamlProviderRequestModel |  (optional)
+body = cloudcheckr_cmx.UpdateRequestSamlProviderRequestModel() # UpdateRequestSamlProviderRequestModel |  (optional)
 
 try:
     # Updates an existing SAML provider entry for this customer.
-    api_response = api_instance.update_saml_provider(customer_id, saml_provider_id, request=request)
+    api_response = api_instance.update_saml_provider(customer_id, saml_provider_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SAMLProvidersApi->update_saml_provider: %s\n" % e)
@@ -261,7 +260,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
  **saml_provider_id** | **str**|  | 
- **request** | [**UpdateRequestSamlProviderRequestModel**](UpdateRequestSamlProviderRequestModel.md)|  | [optional] 
+ **body** | [**UpdateRequestSamlProviderRequestModel**](UpdateRequestSamlProviderRequestModel.md)|  | [optional] 
 
 ### Return type
 

@@ -1,6 +1,6 @@
 # cloudcheckr_cmx.AccountManagementApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -27,9 +27,8 @@ Method | HTTP request | Description
 [**update_account_group**](AccountManagementApi.md#update_account_group) | **PUT** /customer/v1/customers/{customerId}/account-management/account-groups/{accountId} | Update an account group.
 [**update_mav**](AccountManagementApi.md#update_mav) | **PUT** /customer/v1/customers/{customerId}/account-management/mavs/{accountId} | Update a MAV.
 
-
 # **attach_account_groups**
-> BulkAccountAssignmentResponseModelAccountAssignmentResponseModel attach_account_groups(customer_id, group_id, request=request)
+> BulkAccountAssignmentResponseModelAccountAssignmentResponseModel attach_account_groups(customer_id, group_id, body=body)
 
 Bulk move account groups into a parent account group.
 
@@ -49,11 +48,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = cloudcheckr_cmx.AccountManagementApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
 group_id = 'group_id_example' # str | 
-request = cloudcheckr_cmx.BulkAccountAssignmentRequestModel() # BulkAccountAssignmentRequestModel |  (optional)
+body = cloudcheckr_cmx.BulkAccountAssignmentRequestModel() # BulkAccountAssignmentRequestModel |  (optional)
 
 try:
     # Bulk move account groups into a parent account group.
-    api_response = api_instance.attach_account_groups(customer_id, group_id, request=request)
+    api_response = api_instance.attach_account_groups(customer_id, group_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AccountManagementApi->attach_account_groups: %s\n" % e)
@@ -65,7 +64,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
  **group_id** | **str**|  | 
- **request** | [**BulkAccountAssignmentRequestModel**](BulkAccountAssignmentRequestModel.md)|  | [optional] 
+ **body** | [**BulkAccountAssignmentRequestModel**](BulkAccountAssignmentRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -83,7 +82,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **attach_account_groups_to_root**
-> BulkAccountAssignmentResponseModelAccountAssignmentResponseModel attach_account_groups_to_root(customer_id, request=request)
+> BulkAccountAssignmentResponseModelAccountAssignmentResponseModel attach_account_groups_to_root(customer_id, body=body)
 
 Bulk move account groups into the root path.
 
@@ -102,11 +101,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = cloudcheckr_cmx.AccountManagementApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
-request = cloudcheckr_cmx.BulkAccountAssignmentRequestModel() # BulkAccountAssignmentRequestModel |  (optional)
+body = cloudcheckr_cmx.BulkAccountAssignmentRequestModel() # BulkAccountAssignmentRequestModel |  (optional)
 
 try:
     # Bulk move account groups into the root path.
-    api_response = api_instance.attach_account_groups_to_root(customer_id, request=request)
+    api_response = api_instance.attach_account_groups_to_root(customer_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AccountManagementApi->attach_account_groups_to_root: %s\n" % e)
@@ -117,7 +116,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
- **request** | [**BulkAccountAssignmentRequestModel**](BulkAccountAssignmentRequestModel.md)|  | [optional] 
+ **body** | [**BulkAccountAssignmentRequestModel**](BulkAccountAssignmentRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -135,7 +134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_account**
-> GeneralAccountResponseModel create_account(customer_id, request=request)
+> GeneralAccountResponseModel create_account(customer_id, body=body)
 
 Create a General Account.
 
@@ -154,11 +153,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = cloudcheckr_cmx.AccountManagementApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
-request = cloudcheckr_cmx.CreateRequestGeneralAccountRequestModel() # CreateRequestGeneralAccountRequestModel |  (optional)
+body = cloudcheckr_cmx.CreateRequestGeneralAccountRequestModel() # CreateRequestGeneralAccountRequestModel |  (optional)
 
 try:
     # Create a General Account.
-    api_response = api_instance.create_account(customer_id, request=request)
+    api_response = api_instance.create_account(customer_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AccountManagementApi->create_account: %s\n" % e)
@@ -169,7 +168,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
- **request** | [**CreateRequestGeneralAccountRequestModel**](CreateRequestGeneralAccountRequestModel.md)|  | [optional] 
+ **body** | [**CreateRequestGeneralAccountRequestModel**](CreateRequestGeneralAccountRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -187,7 +186,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_account_group**
-> AccountGroupResponseModel create_account_group(customer_id, request=request)
+> AccountGroupResponseModel create_account_group(customer_id, body=body)
 
 Create a new account group.
 
@@ -206,11 +205,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = cloudcheckr_cmx.AccountManagementApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
-request = cloudcheckr_cmx.CreateRequestAccountGroupRequestModel() # CreateRequestAccountGroupRequestModel |  (optional)
+body = cloudcheckr_cmx.CreateRequestAccountGroupRequestModel() # CreateRequestAccountGroupRequestModel |  (optional)
 
 try:
     # Create a new account group.
-    api_response = api_instance.create_account_group(customer_id, request=request)
+    api_response = api_instance.create_account_group(customer_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AccountManagementApi->create_account_group: %s\n" % e)
@@ -221,7 +220,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
- **request** | [**CreateRequestAccountGroupRequestModel**](CreateRequestAccountGroupRequestModel.md)|  | [optional] 
+ **body** | [**CreateRequestAccountGroupRequestModel**](CreateRequestAccountGroupRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -239,7 +238,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_mav**
-> MavResponseModel create_mav(customer_id, request=request)
+> MavResponseModel create_mav(customer_id, body=body)
 
 Create a MAV.
 
@@ -258,11 +257,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = cloudcheckr_cmx.AccountManagementApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
-request = cloudcheckr_cmx.CreateRequestMavRequestModel() # CreateRequestMavRequestModel |  (optional)
+body = cloudcheckr_cmx.CreateRequestMavRequestModel() # CreateRequestMavRequestModel |  (optional)
 
 try:
     # Create a MAV.
-    api_response = api_instance.create_mav(customer_id, request=request)
+    api_response = api_instance.create_mav(customer_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AccountManagementApi->create_mav: %s\n" % e)
@@ -273,7 +272,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
- **request** | [**CreateRequestMavRequestModel**](CreateRequestMavRequestModel.md)|  | [optional] 
+ **body** | [**CreateRequestMavRequestModel**](CreateRequestMavRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -388,7 +387,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1044,7 +1043,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_account**
-> GeneralAccountResponseModel update_account(customer_id, account_id, request=request)
+> GeneralAccountResponseModel update_account(customer_id, account_id, body=body)
 
 Update a General Account.
 
@@ -1064,11 +1063,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = cloudcheckr_cmx.AccountManagementApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
 account_id = 'account_id_example' # str | 
-request = cloudcheckr_cmx.UpdateRequestGeneralAccountRequestModel() # UpdateRequestGeneralAccountRequestModel |  (optional)
+body = cloudcheckr_cmx.UpdateRequestGeneralAccountRequestModel() # UpdateRequestGeneralAccountRequestModel |  (optional)
 
 try:
     # Update a General Account.
-    api_response = api_instance.update_account(customer_id, account_id, request=request)
+    api_response = api_instance.update_account(customer_id, account_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AccountManagementApi->update_account: %s\n" % e)
@@ -1080,7 +1079,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
  **account_id** | **str**|  | 
- **request** | [**UpdateRequestGeneralAccountRequestModel**](UpdateRequestGeneralAccountRequestModel.md)|  | [optional] 
+ **body** | [**UpdateRequestGeneralAccountRequestModel**](UpdateRequestGeneralAccountRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -1098,7 +1097,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_account_group**
-> AccountGroupResponseModel update_account_group(customer_id, account_id, request=request)
+> AccountGroupResponseModel update_account_group(customer_id, account_id, body=body)
 
 Update an account group.
 
@@ -1118,11 +1117,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = cloudcheckr_cmx.AccountManagementApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
 account_id = 'account_id_example' # str | 
-request = cloudcheckr_cmx.UpdateRequestAccountGroupRequestModel() # UpdateRequestAccountGroupRequestModel |  (optional)
+body = cloudcheckr_cmx.UpdateRequestAccountGroupRequestModel() # UpdateRequestAccountGroupRequestModel |  (optional)
 
 try:
     # Update an account group.
-    api_response = api_instance.update_account_group(customer_id, account_id, request=request)
+    api_response = api_instance.update_account_group(customer_id, account_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AccountManagementApi->update_account_group: %s\n" % e)
@@ -1134,7 +1133,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
  **account_id** | **str**|  | 
- **request** | [**UpdateRequestAccountGroupRequestModel**](UpdateRequestAccountGroupRequestModel.md)|  | [optional] 
+ **body** | [**UpdateRequestAccountGroupRequestModel**](UpdateRequestAccountGroupRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -1152,7 +1151,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_mav**
-> MavResponseModel update_mav(customer_id, account_id, request=request)
+> MavResponseModel update_mav(customer_id, account_id, body=body)
 
 Update a MAV.
 
@@ -1172,11 +1171,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = cloudcheckr_cmx.AccountManagementApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
 account_id = 'account_id_example' # str | 
-request = cloudcheckr_cmx.UpdateRequestMavRequestModel() # UpdateRequestMavRequestModel |  (optional)
+body = cloudcheckr_cmx.UpdateRequestMavRequestModel() # UpdateRequestMavRequestModel |  (optional)
 
 try:
     # Update a MAV.
-    api_response = api_instance.update_mav(customer_id, account_id, request=request)
+    api_response = api_instance.update_mav(customer_id, account_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AccountManagementApi->update_mav: %s\n" % e)
@@ -1188,7 +1187,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
  **account_id** | **str**|  | 
- **request** | [**UpdateRequestMavRequestModel**](UpdateRequestMavRequestModel.md)|  | [optional] 
+ **body** | [**UpdateRequestMavRequestModel**](UpdateRequestMavRequestModel.md)|  | [optional] 
 
 ### Return type
 

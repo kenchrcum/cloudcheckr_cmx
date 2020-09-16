@@ -1,6 +1,6 @@
 # cloudcheckr_cmx.PermissionSetsApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,9 +10,8 @@ Method | HTTP request | Description
 [**get_permission_set**](PermissionSetsApi.md#get_permission_set) | **GET** /policy/v1/customers/{customerId}/permission-sets/{permissionSetId} | Get an individual permission set.
 [**update_permission_set**](PermissionSetsApi.md#update_permission_set) | **PUT** /policy/v1/customers/{customerId}/permission-sets/{permissionSetId} | Update a permission set.
 
-
 # **create_permission_set**
-> PermissionSetResponseModel create_permission_set(customer_id, request=request)
+> PermissionSetResponseModel create_permission_set(customer_id, body=body)
 
 Create a permission set.
 
@@ -31,11 +30,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = cloudcheckr_cmx.PermissionSetsApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
-request = cloudcheckr_cmx.CreateRequestPermissionSetRequestModel() # CreateRequestPermissionSetRequestModel |  (optional)
+body = cloudcheckr_cmx.CreateRequestPermissionSetRequestModel() # CreateRequestPermissionSetRequestModel |  (optional)
 
 try:
     # Create a permission set.
-    api_response = api_instance.create_permission_set(customer_id, request=request)
+    api_response = api_instance.create_permission_set(customer_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PermissionSetsApi->create_permission_set: %s\n" % e)
@@ -46,7 +45,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
- **request** | [**CreateRequestPermissionSetRequestModel**](CreateRequestPermissionSetRequestModel.md)|  | [optional] 
+ **body** | [**CreateRequestPermissionSetRequestModel**](CreateRequestPermissionSetRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -229,7 +228,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_permission_set**
-> PermissionSetResponseModel update_permission_set(customer_id, permission_set_id, request=request)
+> PermissionSetResponseModel update_permission_set(customer_id, permission_set_id, body=body)
 
 Update a permission set.
 
@@ -249,11 +248,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = cloudcheckr_cmx.PermissionSetsApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
 permission_set_id = 'permission_set_id_example' # str | 
-request = cloudcheckr_cmx.UpdateRequestPermissionSetRequestModel() # UpdateRequestPermissionSetRequestModel |  (optional)
+body = cloudcheckr_cmx.UpdateRequestPermissionSetRequestModel() # UpdateRequestPermissionSetRequestModel |  (optional)
 
 try:
     # Update a permission set.
-    api_response = api_instance.update_permission_set(customer_id, permission_set_id, request=request)
+    api_response = api_instance.update_permission_set(customer_id, permission_set_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PermissionSetsApi->update_permission_set: %s\n" % e)
@@ -265,7 +264,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
  **permission_set_id** | **str**|  | 
- **request** | [**UpdateRequestPermissionSetRequestModel**](UpdateRequestPermissionSetRequestModel.md)|  | [optional] 
+ **body** | [**UpdateRequestPermissionSetRequestModel**](UpdateRequestPermissionSetRequestModel.md)|  | [optional] 
 
 ### Return type
 

@@ -1,6 +1,6 @@
 # cloudcheckr_cmx.SAMLProviderRulesApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,9 +9,8 @@ Method | HTTP request | Description
 [**list_saml_provider_rules**](SAMLProviderRulesApi.md#list_saml_provider_rules) | **GET** /auth/v1/customers/{customerId}/saml-providers/{samlProviderId}/rules | Get all SAML provider rules assigned to a SAML provider.
 [**update_saml_provider_rule**](SAMLProviderRulesApi.md#update_saml_provider_rule) | **PUT** /auth/v1/customers/{customerId}/saml-providers/{samlProviderId}/rules/{ruleId} | Updates a SAML provider rule.
 
-
 # **create_saml_provider_rule**
-> SamlProviderRuleResponseModel create_saml_provider_rule(customer_id, saml_provider_id, request=request)
+> SamlProviderRuleResponseModel create_saml_provider_rule(customer_id, saml_provider_id, body=body)
 
 Creates a new SAML provider rule for the specified SAML provider.
 
@@ -31,11 +30,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = cloudcheckr_cmx.SAMLProviderRulesApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
 saml_provider_id = 'saml_provider_id_example' # str | 
-request = cloudcheckr_cmx.CreateRequestSamlProviderRuleRequestModel() # CreateRequestSamlProviderRuleRequestModel |  (optional)
+body = cloudcheckr_cmx.CreateRequestSamlProviderRuleRequestModel() # CreateRequestSamlProviderRuleRequestModel |  (optional)
 
 try:
     # Creates a new SAML provider rule for the specified SAML provider.
-    api_response = api_instance.create_saml_provider_rule(customer_id, saml_provider_id, request=request)
+    api_response = api_instance.create_saml_provider_rule(customer_id, saml_provider_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SAMLProviderRulesApi->create_saml_provider_rule: %s\n" % e)
@@ -47,7 +46,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
  **saml_provider_id** | **str**|  | 
- **request** | [**CreateRequestSamlProviderRuleRequestModel**](CreateRequestSamlProviderRuleRequestModel.md)|  | [optional] 
+ **body** | [**CreateRequestSamlProviderRuleRequestModel**](CreateRequestSamlProviderRuleRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -113,7 +112,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -174,7 +173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_saml_provider_rule**
-> SamlProviderRuleResponseModel update_saml_provider_rule(customer_id, saml_provider_id, rule_id, request=request)
+> SamlProviderRuleResponseModel update_saml_provider_rule(customer_id, saml_provider_id, rule_id, body=body)
 
 Updates a SAML provider rule.
 
@@ -195,11 +194,11 @@ api_instance = cloudcheckr_cmx.SAMLProviderRulesApi(cloudcheckr_cmx.ApiClient(co
 customer_id = 'customer_id_example' # str | 
 saml_provider_id = 'saml_provider_id_example' # str | 
 rule_id = 'rule_id_example' # str | 
-request = cloudcheckr_cmx.UpdateRequestSamlProviderRuleRequestModel() # UpdateRequestSamlProviderRuleRequestModel |  (optional)
+body = cloudcheckr_cmx.UpdateRequestSamlProviderRuleRequestModel() # UpdateRequestSamlProviderRuleRequestModel |  (optional)
 
 try:
     # Updates a SAML provider rule.
-    api_response = api_instance.update_saml_provider_rule(customer_id, saml_provider_id, rule_id, request=request)
+    api_response = api_instance.update_saml_provider_rule(customer_id, saml_provider_id, rule_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SAMLProviderRulesApi->update_saml_provider_rule: %s\n" % e)
@@ -212,7 +211,7 @@ Name | Type | Description  | Notes
  **customer_id** | **str**|  | 
  **saml_provider_id** | **str**|  | 
  **rule_id** | **str**|  | 
- **request** | [**UpdateRequestSamlProviderRuleRequestModel**](UpdateRequestSamlProviderRuleRequestModel.md)|  | [optional] 
+ **body** | [**UpdateRequestSamlProviderRuleRequestModel**](UpdateRequestSamlProviderRuleRequestModel.md)|  | [optional] 
 
 ### Return type
 

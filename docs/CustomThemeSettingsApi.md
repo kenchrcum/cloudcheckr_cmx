@@ -1,12 +1,11 @@
 # cloudcheckr_cmx.CustomThemeSettingsApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_theme_settings**](CustomThemeSettingsApi.md#get_theme_settings) | **GET** /customer/v1/customers/theme | Retrieves the customer&#39;s theme settings.
+[**get_theme_settings**](CustomThemeSettingsApi.md#get_theme_settings) | **GET** /customer/v1/customers/theme | Retrieves the customer&#x27;s theme settings.
 [**update_custom_theme_settings**](CustomThemeSettingsApi.md#update_custom_theme_settings) | **PUT** /customer/v1/customers/{customerId}/theme | Update the custom theme settings such as logo, colors, etc.
-
 
 # **get_theme_settings**
 > CustomThemeResponseModel get_theme_settings()
@@ -55,7 +54,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_custom_theme_settings**
-> CustomThemeResponseModel update_custom_theme_settings(customer_id, request=request)
+> CustomThemeResponseModel update_custom_theme_settings(customer_id, body=body)
 
 Update the custom theme settings such as logo, colors, etc.
 
@@ -74,11 +73,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = cloudcheckr_cmx.CustomThemeSettingsApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
-request = cloudcheckr_cmx.UpdateRequestCustomThemeRequestModel() # UpdateRequestCustomThemeRequestModel |  (optional)
+body = cloudcheckr_cmx.UpdateRequestCustomThemeRequestModel() # UpdateRequestCustomThemeRequestModel |  (optional)
 
 try:
     # Update the custom theme settings such as logo, colors, etc.
-    api_response = api_instance.update_custom_theme_settings(customer_id, request=request)
+    api_response = api_instance.update_custom_theme_settings(customer_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CustomThemeSettingsApi->update_custom_theme_settings: %s\n" % e)
@@ -89,7 +88,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
- **request** | [**UpdateRequestCustomThemeRequestModel**](UpdateRequestCustomThemeRequestModel.md)|  | [optional] 
+ **body** | [**UpdateRequestCustomThemeRequestModel**](UpdateRequestCustomThemeRequestModel.md)|  | [optional] 
 
 ### Return type
 

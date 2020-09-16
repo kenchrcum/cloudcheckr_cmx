@@ -1,11 +1,10 @@
 # cloudcheckr_cmx.PermissionsApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_all**](PermissionsApi.md#get_all) | **GET** /policy/v1/customers/{customerId}/permissions | Get all permissions.
-
 
 # **get_all**
 > PaginationWithCountResponsePermissionResponseModel get_all(customer_id, order_by=order_by, filter=filter, search=search)

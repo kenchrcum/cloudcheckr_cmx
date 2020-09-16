@@ -1,12 +1,11 @@
 # cloudcheckr_cmx.CustomersApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_customer**](CustomersApi.md#get_customer) | **GET** /customer/v1/customers/{customerId} | Get an individual customer.
 [**list_customers**](CustomersApi.md#list_customers) | **GET** /customer/v1/customers | Get all customers.
-
 
 # **get_customer**
 > CustomerResponseModel get_customer(customer_id)

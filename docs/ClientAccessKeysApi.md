@@ -1,6 +1,6 @@
 # cloudcheckr_cmx.ClientAccessKeysApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,9 +8,8 @@ Method | HTTP request | Description
 [**delete_client_access_key**](ClientAccessKeysApi.md#delete_client_access_key) | **DELETE** /auth/v1/customers/{customerId}/clients/{clientId}/access-keys/{accessKeyId} | Delete a client access key.
 [**list_client_access_keys**](ClientAccessKeysApi.md#list_client_access_keys) | **GET** /auth/v1/customers/{customerId}/clients/{clientId}/access-keys | Get all client access keys.
 
-
 # **create_client_access_key**
-> NewClientAccessInfo create_client_access_key(customer_id, client_id, request=request)
+> NewClientAccessInfo create_client_access_key(customer_id, client_id, body=body)
 
 Create a new client access key.
 
@@ -30,11 +29,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = cloudcheckr_cmx.ClientAccessKeysApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
 client_id = 'client_id_example' # str | 
-request = cloudcheckr_cmx.CreateRequestClientAccessKeyRequestModel() # CreateRequestClientAccessKeyRequestModel | This includes the settings to create the new client Access Key. (optional)
+body = cloudcheckr_cmx.CreateRequestClientAccessKeyRequestModel() # CreateRequestClientAccessKeyRequestModel | This includes the settings to create the new client Access Key. (optional)
 
 try:
     # Create a new client access key.
-    api_response = api_instance.create_client_access_key(customer_id, client_id, request=request)
+    api_response = api_instance.create_client_access_key(customer_id, client_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ClientAccessKeysApi->create_client_access_key: %s\n" % e)
@@ -46,7 +45,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
  **client_id** | **str**|  | 
- **request** | [**CreateRequestClientAccessKeyRequestModel**](CreateRequestClientAccessKeyRequestModel.md)| This includes the settings to create the new client Access Key. | [optional] 
+ **body** | [**CreateRequestClientAccessKeyRequestModel**](CreateRequestClientAccessKeyRequestModel.md)| This includes the settings to create the new client Access Key. | [optional] 
 
 ### Return type
 

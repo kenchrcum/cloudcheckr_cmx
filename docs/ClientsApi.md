@@ -1,6 +1,6 @@
 # cloudcheckr_cmx.ClientsApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,9 +10,8 @@ Method | HTTP request | Description
 [**list_clients**](ClientsApi.md#list_clients) | **GET** /auth/v1/customers/{customerId}/clients | Get all clients.
 [**update_client**](ClientsApi.md#update_client) | **PUT** /auth/v1/customers/{customerId}/clients/{clientId} | Update a client.
 
-
 # **create_client**
-> ClientResponseModel create_client(customer_id, request=request)
+> ClientResponseModel create_client(customer_id, body=body)
 
 Create a new client.
 
@@ -31,11 +30,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = cloudcheckr_cmx.ClientsApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
-request = cloudcheckr_cmx.CreateRequestClientCreateRequestModel() # CreateRequestClientCreateRequestModel | This includes the settings to create the new client. (optional)
+body = cloudcheckr_cmx.CreateRequestClientCreateRequestModel() # CreateRequestClientCreateRequestModel | This includes the settings to create the new client. (optional)
 
 try:
     # Create a new client.
-    api_response = api_instance.create_client(customer_id, request=request)
+    api_response = api_instance.create_client(customer_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ClientsApi->create_client: %s\n" % e)
@@ -46,7 +45,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
- **request** | [**CreateRequestClientCreateRequestModel**](CreateRequestClientCreateRequestModel.md)| This includes the settings to create the new client. | [optional] 
+ **body** | [**CreateRequestClientCreateRequestModel**](CreateRequestClientCreateRequestModel.md)| This includes the settings to create the new client. | [optional] 
 
 ### Return type
 
@@ -110,7 +109,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -227,7 +226,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_client**
-> ClientResponseModel update_client(customer_id, client_id, request=request)
+> ClientResponseModel update_client(customer_id, client_id, body=body)
 
 Update a client.
 
@@ -247,11 +246,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = cloudcheckr_cmx.ClientsApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
 client_id = 'client_id_example' # str | 
-request = cloudcheckr_cmx.UpdateRequestClientRequestModel() # UpdateRequestClientRequestModel |  (optional)
+body = cloudcheckr_cmx.UpdateRequestClientRequestModel() # UpdateRequestClientRequestModel |  (optional)
 
 try:
     # Update a client.
-    api_response = api_instance.update_client(customer_id, client_id, request=request)
+    api_response = api_instance.update_client(customer_id, client_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ClientsApi->update_client: %s\n" % e)
@@ -263,7 +262,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
  **client_id** | **str**|  | 
- **request** | [**UpdateRequestClientRequestModel**](UpdateRequestClientRequestModel.md)|  | [optional] 
+ **body** | [**UpdateRequestClientRequestModel**](UpdateRequestClientRequestModel.md)|  | [optional] 
 
 ### Return type
 

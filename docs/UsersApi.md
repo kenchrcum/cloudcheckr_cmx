@@ -1,6 +1,6 @@
 # cloudcheckr_cmx.UsersApi
 
-All URIs are relative to *https://api-eu.cloudcheckr.com*
+All URIs are relative to *//api-eu.cloudcheckr.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,9 +11,8 @@ Method | HTTP request | Description
 [**send_activation**](UsersApi.md#send_activation) | **POST** /auth/v1/customers/{customerId}/users/{userId}/send-activation | Send a user activation email.
 [**update_user**](UsersApi.md#update_user) | **PUT** /auth/v1/customers/{customerId}/users/{userId} | Update a user.
 
-
 # **create_user**
-> UserResponseModel create_user(customer_id, request=request)
+> UserResponseModel create_user(customer_id, body=body)
 
 Create a new user.
 
@@ -32,11 +31,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = cloudcheckr_cmx.UsersApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
-request = cloudcheckr_cmx.CreateRequestUserRequestModel() # CreateRequestUserRequestModel |  (optional)
+body = cloudcheckr_cmx.CreateRequestUserRequestModel() # CreateRequestUserRequestModel |  (optional)
 
 try:
     # Create a new user.
-    api_response = api_instance.create_user(customer_id, request=request)
+    api_response = api_instance.create_user(customer_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->create_user: %s\n" % e)
@@ -47,7 +46,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
- **request** | [**CreateRequestUserRequestModel**](CreateRequestUserRequestModel.md)|  | [optional] 
+ **body** | [**CreateRequestUserRequestModel**](CreateRequestUserRequestModel.md)|  | [optional] 
 
 ### Return type
 
@@ -111,7 +110,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -279,7 +278,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_user**
-> UserResponseModel update_user(customer_id, user_id, request=request)
+> UserResponseModel update_user(customer_id, user_id, body=body)
 
 Update a user.
 
@@ -299,11 +298,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = cloudcheckr_cmx.UsersApi(cloudcheckr_cmx.ApiClient(configuration))
 customer_id = 'customer_id_example' # str | 
 user_id = 'user_id_example' # str | 
-request = cloudcheckr_cmx.UpdateRequestUserRequestModel() # UpdateRequestUserRequestModel |  (optional)
+body = cloudcheckr_cmx.UpdateRequestUserRequestModel() # UpdateRequestUserRequestModel |  (optional)
 
 try:
     # Update a user.
-    api_response = api_instance.update_user(customer_id, user_id, request=request)
+    api_response = api_instance.update_user(customer_id, user_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->update_user: %s\n" % e)
@@ -315,7 +314,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **str**|  | 
  **user_id** | **str**|  | 
- **request** | [**UpdateRequestUserRequestModel**](UpdateRequestUserRequestModel.md)|  | [optional] 
+ **body** | [**UpdateRequestUserRequestModel**](UpdateRequestUserRequestModel.md)|  | [optional] 
 
 ### Return type
 
